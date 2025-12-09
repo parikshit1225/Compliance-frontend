@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Login</title>
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- MERGED CSS -->
+    <style>
+        /* Page Background */
+        body {
+            background: #eef3f7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Main Card */
+        .login-card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid #dde3ea;
+        }
+
+        /* Left Panel */
+        .left-panel {
+            background: #ffffff;
+        }
+
+        /* Brand Title */
+        .brand-title {
+            color: #0a3d47;
+        }
+
+        /* Inputs */
+        .custom-input {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #c9d4df;
+            transition: 0.2s;
+        }
+        .custom-input:focus {
+            border-color: #0a3d47;
+            box-shadow: 0 0 0 3px rgba(10, 61, 71, 0.12);
+        }
+
+        /* Sign-in Button */
+        .login-btn {
+            background: linear-gradient(135deg, #0a3d47, #0f5965);
+            border-radius: 10px;
+            border: none;
+            color: #fff !important;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        .login-btn:hover {
+            background: linear-gradient(135deg, #0f5965, #0a3d47);
+            transform: translateY(-2px);
+        }
+
+        /* Social Buttons */
+        .social-btn {
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: 500;
+        }
+
+        /* Right Panel */
+        .right-panel {
+            background: linear-gradient(140deg, #08333b, #0b4953, #0f6474);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Divider Text */
+        .hr-text {
+            position: relative;
+            text-align: center;
+            color: #6b7280;
+        }
+        .hr-text::before,
+        .hr-text::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #cbd5e1;
+        }
+        .hr-text::before { left: 0; }
+        .hr-text::after { right: 0; }
+
+        /* Brand Grid */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        .brand-grid div {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #eafcff;
+            transition: 0.2s;
+        }
+        .brand-grid div:hover {
+            background: rgba(255, 255, 255, 0.28);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container my-5">
+    <div class="row g-0 login-card shadow-lg">
+
+        <!-- LEFT SIDE -->
+        <div class="col-md-6 left-panel p-5">
+            <h3 class="fw-bold mb-4 brand-title">Compliance</h3>
+
+            <h2 class="fw-bold mb-2">Welcome Back</h2>
+            <p class="text-muted mb-4">
+                Sign in to access your dashboard and continue optimizing your QA process.
+            </p>
+
+            <!-- <form method="POST" action="/signin"> -->
+            <!-- <form method="POST" action="http://127.0.0.1:7000/signin"> -->
+            <form id="loginForm">
+
+
+                <label class="fw-semibold">Email</label>
+                <input type="email" name="username" class="form-control mb-3 custom-input" placeholder="Enter your email" required>
+
+                <label class="fw-semibold">Password</label>
+                <input type="password" name="password" class="form-control mb-2 custom-input" placeholder="Enter your password" required>
+
+                <a href="#" class="d-block text-end small mb-3 text-primary">Forgot Password?</a>
+
+                <button class="btn login-btn w-100 py-2 mb-3">Sign In</button>
+
+                <div class="text-center hr-text my-3">OR</div>
+
+                <button class="btn btn-outline-dark w-100 mb-2 social-btn">
+                    Continue with Google
+                </button>
+
+                <button class="btn btn-outline-dark w-100 social-btn">
+                    Continue with Apple
+                </button>
+
+                <p class="text-center mt-3">
+                    Don't have an account?
+                    <a href="signup.html" class="fw-semibold text-primary">Sign Up</a>
+                </p>
+
+            </form>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-md-6 right-panel p-5 text-white">
+
+            <h2 class="fw-bold mb-4">Revolutionize QA with<br>Smarter Automation</h2>
+
+            <blockquote class="blockquote mb-4">
+                “Compliance transformed our testing speed and quality.
+                Reliable, efficient, and consistent.”
+            </blockquote>
+
+            <!-- <p class="fw-semibold mb-0">Michael Carter</p>
+            <small class="opacity-75">Software Engineer at DevCore</small> -->
+
+            <p class="text-uppercase small opacity-75 mt-4">Trusted by 1K+ Teams</p>
+
+            <div class="brand-grid mt-3">
+                <div>Discord</div>
+                <div>Mailchimp</div>
+                <div>Grammarly</div>
+                <div>Attentive</div>
+                <div>Hellosign</div>
+                <div>Intercom</div>
+                <div>Square</div>
+                <div>Dropbox</div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const email = document.querySelector("input[name='username']").value;
+    const password = document.querySelector("input[name='password']").value;
+
+    try {
+        const formData = new URLSearchParams();
+        formData.append("email", email);
+        formData.append("password", password);
+
+        const response = await fetch("http://127.0.0.1:7000/signin", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: formData.toString()
+        });
+
+        const result = await response.json();
+        console.log("API Response:", result);
+
+        if (response.ok) {
+            alert("Login successful!");
+            window.location.href = "dashboard.html";
+        } else {
+            alert(result.error || result.message || "Login failed");
+        }
+
+    } catch (error) {
+        console.error("Fetch Error:", error);
+        alert("Server not reachable");
+    }
+});
+</script>
+</body>
+</html>
